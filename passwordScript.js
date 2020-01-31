@@ -20,8 +20,10 @@ if(isNaN(lengthOfPassword))
     var passwordGeneratedWithArrayOf = [];
     var passwordGenerated =[];
     var c= 0;
-    function getValue()
-    {   
+    
+    // Function to generate password
+    function generatePass()
+    {      
         for (i=0;i< checks.length;i++)
         {
             if( checks[i].checked === true)
@@ -29,11 +31,7 @@ if(isNaN(lengthOfPassword))
                 passwordGeneratedWithArrayOf.push(checks[i].value);
             }
         }
-        console.log(`${passwordGeneratedWithArrayOf}`);
-    }
-    // Function to generate password
-    function generatePass()
-    {                
+        console.log(`${passwordGeneratedWithArrayOf}`);          
         for(i=0;i<passwordGeneratedWithArrayOf.length;i++)
         {
             console.log(`printing the elements ${passwordGeneratedWithArrayOf[i]}`);
@@ -65,7 +63,7 @@ if(isNaN(lengthOfPassword))
                 for(i=0;i<lengthOfPassword;i++)
                 {
                     var pWithNumber = charSetN[0][Math.floor(Math.random()*charSetN[0].length)];
-                    passwordGeneratedWith += pWithNumber;   
+                    passwordGenerated += pWithNumber;   
                 }
             }
             else
@@ -77,6 +75,8 @@ if(isNaN(lengthOfPassword))
                 }
             }      
                console.log(`print the ${passwordGenerated}`);
+               document.getElementById("textArea").value = `${passwordGenerated}`;
+      
                             
         }        
         else if(passwordGeneratedWithArrayOf.length == 2)
