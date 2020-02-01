@@ -23,7 +23,8 @@ if(isNaN(lengthOfPassword))
     
     // Function to generate password
     function generatePass()
-    {      
+    {   
+        
         for (i=0;i< checks.length;i++)
         {
             if( checks[i].checked === true)
@@ -31,11 +32,13 @@ if(isNaN(lengthOfPassword))
                 passwordGeneratedWithArrayOf.push(checks[i].value);
             }
         }
-        console.log(`${passwordGeneratedWithArrayOf}`);          
+        console.log(`${passwordGeneratedWithArrayOf}`);
+                  
         for(i=0;i<passwordGeneratedWithArrayOf.length;i++)
         {
             console.log(`printing the elements ${passwordGeneratedWithArrayOf[i]}`);
         }
+        if (passwordGeneratedWithArrayOf.length != 0){
         if (passwordGeneratedWithArrayOf.length ==1 )
         {          
             var charSetC = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
@@ -193,4 +196,8 @@ if(isNaN(lengthOfPassword))
             console.log(`password is ${passwordGenerated}`);
             document.getElementById("textArea").value = `${passwordGenerated}`;       
         }
+    }
+    else{
+        checkLengthOfPassword();
+    }
     }
