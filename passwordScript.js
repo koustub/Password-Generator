@@ -197,7 +197,9 @@ if(isNaN(lengthOfPassword))
             document.getElementById("textArea").value = `${passwordGenerated}`;       
         }
     }
-    else{
-        checkLengthOfPassword();
+    else
+    {
+        alert("please select atleast one option above");
     }
-    }
+   
+}
